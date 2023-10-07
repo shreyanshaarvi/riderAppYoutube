@@ -90,7 +90,9 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: const [Locale('en', '')],
       theme: ThemeData(
         brightness: Brightness.light,
-        scrollbarTheme: ScrollbarThemeData(),
+        scrollbarTheme: ScrollbarThemeData(
+          interactive: true,
+        ),
       ),
       themeMode: _themeMode,
       routerConfig: _router,

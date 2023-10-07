@@ -2875,7 +2875,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   30.0, 10.0, 10.0, 10.0),
                               child: Text(
-                                'Recommended Resturants',
+                                'Recommended Food',
                                 style: FlutterFlowTheme.of(context)
                                     .titleLarge
                                     .override(

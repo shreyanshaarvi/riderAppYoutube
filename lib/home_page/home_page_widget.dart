@@ -2871,7 +2871,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         children: [
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                10.0, 10.0, 10.0, 10.0),
+                                30.0, 10.0, 10.0, 10.0),
                             child: Text(
                               'Recommended Resturants',
                               style: FlutterFlowTheme.of(context)
@@ -3369,7 +3369,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           ),
                           Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
-                                10.0, 10.0, 10.0, 10.0),
+                                30.0, 10.0, 10.0, 10.0),
                             child: Text(
                               'Dish Category',
                               style: FlutterFlowTheme.of(context)

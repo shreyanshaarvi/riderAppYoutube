@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "544642156485",
+    "project_id": "spreecode-pvt-ltd",
+    "storage_bucket": "spreecode-pvt-ltd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544642156485:android:6d2b3cb95530b0fa36edac",
+        "android_client_info": {
+          "package_name": "com.mycompany.fooddelivery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544642156485-is6c7in7pm82sbus7k4e7ot5pc90cbjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5UcBgg5z8LYYctQadgLc7tcOGR41RwFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544642156485-is6c7in7pm82sbus7k4e7ot5pc90cbjp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "544642156485-a3k1vahrtg1nsi17ki1ouqf610411n34.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.spreecode.spreecodepvtltd"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544642156485:android:1ea623a55192080036edac",
+        "android_client_info": {
+          "package_name": "com.spreecode.spreecodepvtltd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544642156485-826kok7oobk01a1g2ve560mplcr8ld41.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spreecode.spreecodepvtltd",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "544642156485-is6c7in7pm82sbus7k4e7ot5pc90cbjp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5UcBgg5z8LYYctQadgLc7tcOGR41RwFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544642156485-is6c7in7pm82sbus7k4e7ot5pc90cbjp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "544642156485-a3k1vahrtg1nsi17ki1ouqf610411n34.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.spreecode.spreecodepvtltd"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -3395,8 +3395,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             10.0, 10.0, 10.0, 10.0),
                                         child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
+                                          width: 107.0,
+                                          height: 107.0,
                                           clipBehavior: Clip.antiAlias,
                                           decoration: BoxDecoration(
                                             shape: BoxShape.circle,
@@ -3413,7 +3413,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
+                                              fontSize: 21.0,
                                               fontWeight: FontWeight.w500,
                                             ),
                                       ),

@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -2865,908 +2866,1650 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                30.0, 10.0, 10.0, 10.0),
-                            child: Text(
-                              'Recommended Resturants',
-                              style: FlutterFlowTheme.of(context)
-                                  .titleLarge
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    fontSize: 24.0,
-                                  ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                10.0, 0.0, 0.0, 0.0),
-                            child: SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 10.0),
-                                    child: Container(
-                                      width: 300.0,
-                                      height: 302.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNjk2Njk3NTgyfDA&ixlib=rb-4.0.3&q=80&w=1080',
-                                              width: 300.0,
-                                              height: 185.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 7.0, 7.0, 7.0),
-                                            child: Text(
-                                              'Maharaja Burger ',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 22.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 0.0, 7.0, 7.0),
-                                            child: Text(
-                                              'Crispy And Crunchy',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodySmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 17.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 10.0, 0.0, 0.0),
-                                            child: RatingBar.builder(
-                                              onRatingUpdate: (newValue) =>
-                                                  setState(() =>
-                                                      _model.ratingBarValue1 =
-                                                          newValue),
-                                              itemBuilder: (context, index) =>
-                                                  Icon(
-                                                Icons.star_rounded,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                              ),
-                                              direction: Axis.horizontal,
-                                              initialRating: _model
-                                                  .ratingBarValue1 ??= 3.0,
-                                              unratedColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .accent3,
-                                              itemCount: 5,
-                                              itemSize: 30.0,
-                                              glowColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
+                      child: SingleChildScrollView(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  30.0, 10.0, 10.0, 10.0),
+                              child: Text(
+                                'Recommended Resturants',
+                                style: FlutterFlowTheme.of(context)
+                                    .titleLarge
+                                    .override(
+                                      fontFamily: 'Outfit',
+                                      fontSize: 24.0,
                                     ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 10.0),
-                                    child: Container(
-                                      width: 300.0,
-                                      height: 302.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNjk2Njk3NTgyfDA&ixlib=rb-4.0.3&q=80&w=1080',
-                                              width: 300.0,
-                                              height: 185.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 7.0, 7.0, 7.0),
-                                            child: Text(
-                                              'Maharaja Burger ',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 22.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 0.0, 7.0, 7.0),
-                                            child: Text(
-                                              'Crispy And Crunchy',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodySmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 17.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 10.0, 0.0, 0.0),
-                                            child: RatingBar.builder(
-                                              onRatingUpdate: (newValue) =>
-                                                  setState(() =>
-                                                      _model.ratingBarValue2 =
-                                                          newValue),
-                                              itemBuilder: (context, index) =>
-                                                  Icon(
-                                                Icons.star_rounded,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                              ),
-                                              direction: Axis.horizontal,
-                                              initialRating: _model
-                                                  .ratingBarValue2 ??= 3.0,
-                                              unratedColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .accent3,
-                                              itemCount: 5,
-                                              itemSize: 30.0,
-                                              glowColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 10.0),
-                                    child: Container(
-                                      width: 300.0,
-                                      height: 302.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNjk2Njk3NTgyfDA&ixlib=rb-4.0.3&q=80&w=1080',
-                                              width: 300.0,
-                                              height: 185.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 7.0, 7.0, 7.0),
-                                            child: Text(
-                                              'Maharaja Burger ',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 22.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 0.0, 7.0, 7.0),
-                                            child: Text(
-                                              'Crispy And Crunchy',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodySmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 17.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 10.0, 0.0, 0.0),
-                                            child: RatingBar.builder(
-                                              onRatingUpdate: (newValue) =>
-                                                  setState(() =>
-                                                      _model.ratingBarValue3 =
-                                                          newValue),
-                                              itemBuilder: (context, index) =>
-                                                  Icon(
-                                                Icons.star_rounded,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                              ),
-                                              direction: Axis.horizontal,
-                                              initialRating: _model
-                                                  .ratingBarValue3 ??= 3.0,
-                                              unratedColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .accent3,
-                                              itemCount: 5,
-                                              itemSize: 30.0,
-                                              glowColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 10.0),
-                                    child: Container(
-                                      width: 300.0,
-                                      height: 302.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNjk2Njk3NTgyfDA&ixlib=rb-4.0.3&q=80&w=1080',
-                                              width: 300.0,
-                                              height: 185.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 7.0, 7.0, 7.0),
-                                            child: Text(
-                                              'Maharaja Burger ',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 22.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 0.0, 7.0, 7.0),
-                                            child: Text(
-                                              'Crispy And Crunchy',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodySmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 17.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 10.0, 0.0, 0.0),
-                                            child: RatingBar.builder(
-                                              onRatingUpdate: (newValue) =>
-                                                  setState(() =>
-                                                      _model.ratingBarValue4 =
-                                                          newValue),
-                                              itemBuilder: (context, index) =>
-                                                  Icon(
-                                                Icons.star_rounded,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                              ),
-                                              direction: Axis.horizontal,
-                                              initialRating: _model
-                                                  .ratingBarValue4 ??= 3.0,
-                                              unratedColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .accent3,
-                                              itemCount: 5,
-                                              itemSize: 30.0,
-                                              glowColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 10.0, 0.0, 10.0),
-                                    child: Container(
-                                      width: 300.0,
-                                      height: 302.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                            child: Image.network(
-                                              'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNjk2Njk3NTgyfDA&ixlib=rb-4.0.3&q=80&w=1080',
-                                              width: 300.0,
-                                              height: 185.0,
-                                              fit: BoxFit.cover,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 7.0, 7.0, 7.0),
-                                            child: Text(
-                                              'Maharaja Burger ',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 22.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 0.0, 7.0, 7.0),
-                                            child: Text(
-                                              'Crispy And Crunchy',
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodySmall
-                                                  .override(
-                                                    fontFamily: 'Readex Pro',
-                                                    fontSize: 17.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    7.0, 10.0, 0.0, 0.0),
-                                            child: RatingBar.builder(
-                                              onRatingUpdate: (newValue) =>
-                                                  setState(() =>
-                                                      _model.ratingBarValue5 =
-                                                          newValue),
-                                              itemBuilder: (context, index) =>
-                                                  Icon(
-                                                Icons.star_rounded,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primary,
-                                              ),
-                                              direction: Axis.horizontal,
-                                              initialRating: _model
-                                                  .ratingBarValue5 ??= 3.0,
-                                              unratedColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .accent3,
-                                              itemCount: 5,
-                                              itemSize: 30.0,
-                                              glowColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ]
-                                    .divide(SizedBox(width: 30.0))
-                                    .around(SizedBox(width: 30.0)),
                               ),
                             ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                30.0, 10.0, 10.0, 10.0),
-                            child: Text(
-                              'Dish Category',
-                              style: FlutterFlowTheme.of(context)
-                                  .titleLarge
-                                  .override(
-                                    fontFamily: 'Outfit',
-                                    fontSize: 24.0,
-                                  ),
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
-                                10.0, 10.0, 10.0, 10.0),
-                            child: SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 107.0,
-                                          height: 107.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1508736793122-f516e3ba5569?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw2fHxidXJnZXIlMjB0cmFuc3BhZXJudHxlbnwwfHx8fDE2OTY3MDEzMTN8MA&ixlib=rb-4.0.3&q=85',
-                                            fit: BoxFit.cover,
-                                          ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  10.0, 0.0, 0.0, 0.0),
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Container(
+                                        width: 300.0,
+                                        height: 302.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNjk2Njk3NTgyfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                                width: 300.0,
+                                                height: 185.0,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 7.0, 7.0),
+                                              child: Text(
+                                                'Maharaja Burger ',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 0.0, 7.0, 7.0),
+                                              child: Text(
+                                                'Crispy And Crunchy',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 17.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      7.0, 10.0, 0.0, 0.0),
+                                              child: RatingBar.builder(
+                                                onRatingUpdate: (newValue) =>
+                                                    setState(() =>
+                                                        _model.ratingBarValue1 =
+                                                            newValue),
+                                                itemBuilder: (context, index) =>
+                                                    Icon(
+                                                  Icons.star_rounded,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                ),
+                                                direction: Axis.horizontal,
+                                                initialRating: _model
+                                                    .ratingBarValue1 ??= 3.0,
+                                                unratedColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .accent3,
+                                                itemCount: 5,
+                                                itemSize: 30.0,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 21.0,
-                                              fontWeight: FontWeight.w500,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Container(
+                                        width: 300.0,
+                                        height: 302.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNjk2Njk3NTgyfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                                width: 300.0,
+                                                height: 185.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                            fit: BoxFit.cover,
-                                          ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 7.0, 7.0),
+                                              child: Text(
+                                                'Maharaja Burger ',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 0.0, 7.0, 7.0),
+                                              child: Text(
+                                                'Crispy And Crunchy',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 17.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      7.0, 10.0, 0.0, 0.0),
+                                              child: RatingBar.builder(
+                                                onRatingUpdate: (newValue) =>
+                                                    setState(() =>
+                                                        _model.ratingBarValue2 =
+                                                            newValue),
+                                                itemBuilder: (context, index) =>
+                                                    Icon(
+                                                  Icons.star_rounded,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                ),
+                                                direction: Axis.horizontal,
+                                                initialRating: _model
+                                                    .ratingBarValue2 ??= 3.0,
+                                                unratedColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .accent3,
+                                                itemCount: 5,
+                                                itemSize: 30.0,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Container(
+                                        width: 300.0,
+                                        height: 302.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNjk2Njk3NTgyfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                                width: 300.0,
+                                                height: 185.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                            fit: BoxFit.cover,
-                                          ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 7.0, 7.0),
+                                              child: Text(
+                                                'Maharaja Burger ',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 0.0, 7.0, 7.0),
+                                              child: Text(
+                                                'Crispy And Crunchy',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 17.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      7.0, 10.0, 0.0, 0.0),
+                                              child: RatingBar.builder(
+                                                onRatingUpdate: (newValue) =>
+                                                    setState(() =>
+                                                        _model.ratingBarValue3 =
+                                                            newValue),
+                                                itemBuilder: (context, index) =>
+                                                    Icon(
+                                                  Icons.star_rounded,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                ),
+                                                direction: Axis.horizontal,
+                                                initialRating: _model
+                                                    .ratingBarValue3 ??= 3.0,
+                                                unratedColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .accent3,
+                                                itemCount: 5,
+                                                itemSize: 30.0,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Container(
+                                        width: 300.0,
+                                        height: 302.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNjk2Njk3NTgyfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                                width: 300.0,
+                                                height: 185.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                            fit: BoxFit.cover,
-                                          ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 7.0, 7.0),
+                                              child: Text(
+                                                'Maharaja Burger ',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 0.0, 7.0, 7.0),
+                                              child: Text(
+                                                'Crispy And Crunchy',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 17.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      7.0, 10.0, 0.0, 0.0),
+                                              child: RatingBar.builder(
+                                                onRatingUpdate: (newValue) =>
+                                                    setState(() =>
+                                                        _model.ratingBarValue4 =
+                                                            newValue),
+                                                itemBuilder: (context, index) =>
+                                                    Icon(
+                                                  Icons.star_rounded,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                ),
+                                                direction: Axis.horizontal,
+                                                initialRating: _model
+                                                    .ratingBarValue4 ??= 3.0,
+                                                unratedColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .accent3,
+                                                itemCount: 5,
+                                                itemSize: 30.0,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Container(
+                                        width: 300.0,
+                                        height: 302.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwxfHxidXJnZXJ8ZW58MHx8fHwxNjk2Njk3NTgyfDA&ixlib=rb-4.0.3&q=80&w=1080',
+                                                width: 300.0,
+                                                height: 185.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                            fit: BoxFit.cover,
-                                          ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 7.0, 7.0),
+                                              child: Text(
+                                                'Maharaja Burger ',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 0.0, 7.0, 7.0),
+                                              child: Text(
+                                                'Crispy And Crunchy',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 17.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      7.0, 10.0, 0.0, 0.0),
+                                              child: RatingBar.builder(
+                                                onRatingUpdate: (newValue) =>
+                                                    setState(() =>
+                                                        _model.ratingBarValue5 =
+                                                            newValue),
+                                                itemBuilder: (context, index) =>
+                                                    Icon(
+                                                  Icons.star_rounded,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                ),
+                                                direction: Axis.horizontal,
+                                                initialRating: _model
+                                                    .ratingBarValue5 ??= 3.0,
+                                                unratedColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .accent3,
+                                                itemCount: 5,
+                                                itemSize: 30.0,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 10.0, 10.0, 10.0),
-                                        child: Container(
-                                          width: 95.0,
-                                          height: 95.0,
-                                          clipBehavior: Clip.antiAlias,
-                                          decoration: BoxDecoration(
-                                            shape: BoxShape.circle,
-                                          ),
-                                          child: Image.network(
-                                            'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'Burger',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              fontSize: 18.0,
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                      ),
-                                    ],
-                                  ),
-                                ]
-                                    .divide(SizedBox(width: 20.0))
-                                    .around(SizedBox(width: 20.0)),
+                                    ),
+                                  ]
+                                      .divide(SizedBox(width: 30.0))
+                                      .around(SizedBox(width: 30.0)),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  30.0, 10.0, 10.0, 10.0),
+                              child: Text(
+                                'Dish Category',
+                                style: FlutterFlowTheme.of(context)
+                                    .titleLarge
+                                    .override(
+                                      fontFamily: 'Outfit',
+                                      fontSize: 24.0,
+                                    ),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  10.0, 10.0, 10.0, 10.0),
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1508736793122-f516e3ba5569?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw2fHxidXJnZXIlMjB0cmFuc3BhZXJudHxlbnwwfHx8fDE2OTY3MDEzMTN8MA&ixlib=rb-4.0.3&q=85',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  10.0, 10.0, 10.0, 10.0),
+                                          child: Container(
+                                            width: 95.0,
+                                            height: 95.0,
+                                            clipBehavior: Clip.antiAlias,
+                                            decoration: BoxDecoration(
+                                              shape: BoxShape.circle,
+                                            ),
+                                            child: Image.network(
+                                              'https://images.unsplash.com/photo-1612927601601-6638404737ce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwyfHxub29kbGVzfGVufDB8fHx8MTY5NjcwMTM0MXww&ixlib=rb-4.0.3&q=80&w=1080',
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          'Burger',
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Readex Pro',
+                                                fontSize: 18.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                      ],
+                                    ),
+                                  ]
+                                      .divide(SizedBox(width: 20.0))
+                                      .around(SizedBox(width: 20.0)),
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  30.0, 20.0, 10.0, 10.0),
+                              child: Text(
+                                'Top Resturant Near By You',
+                                style: FlutterFlowTheme.of(context)
+                                    .titleLarge
+                                    .override(
+                                      fontFamily: 'Outfit',
+                                      fontSize: 24.0,
+                                    ),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  10.0, 0.0, 0.0, 0.0),
+                              child: SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Container(
+                                        width: 382.0,
+                                        height: 321.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1593908717414-78a92b700feb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw3fHxyZXN0dXJhbnR8ZW58MHx8fHwxNjk2NzAzNTM4fDA&ixlib=rb-4.0.3&q=85',
+                                                width: 389.0,
+                                                height: 185.0,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 7.0, 7.0),
+                                              child: Text(
+                                                'The Bar On Wheel',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 0.0, 7.0, 7.0),
+                                              child: Text(
+                                                'The best mobile drink shop',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 17.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 0.0, 0.0),
+                                              child: RichText(
+                                                textScaleFactor:
+                                                    MediaQuery.of(context)
+                                                        .textScaleFactor,
+                                                text: TextSpan(
+                                                  children: [
+                                                    TextSpan(
+                                                      text: 'Loved By',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                              ),
+                                                    ),
+                                                    TextSpan(
+                                                      text: ' - 593 Order',
+                                                      style: TextStyle(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
+                                                      ),
+                                                    )
+                                                  ],
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium,
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      7.0, 10.0, 0.0, 0.0),
+                                              child: RatingBar.builder(
+                                                onRatingUpdate: (newValue) =>
+                                                    setState(() =>
+                                                        _model.ratingBarValue6 =
+                                                            newValue),
+                                                itemBuilder: (context, index) =>
+                                                    Icon(
+                                                  Icons.star_rounded,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                ),
+                                                direction: Axis.horizontal,
+                                                initialRating: _model
+                                                    .ratingBarValue6 ??= 3.0,
+                                                unratedColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .accent3,
+                                                itemCount: 5,
+                                                itemSize: 30.0,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Container(
+                                        width: 382.0,
+                                        height: 321.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1593908717414-78a92b700feb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw3fHxyZXN0dXJhbnR8ZW58MHx8fHwxNjk2NzAzNTM4fDA&ixlib=rb-4.0.3&q=85',
+                                                width: 389.0,
+                                                height: 185.0,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 7.0, 7.0),
+                                              child: Text(
+                                                'The Bar On Wheel',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 0.0, 7.0, 7.0),
+                                              child: Text(
+                                                'The best mobile drink shop',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 17.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 0.0, 0.0),
+                                              child: RichText(
+                                                textScaleFactor:
+                                                    MediaQuery.of(context)
+                                                        .textScaleFactor,
+                                                text: TextSpan(
+                                                  children: [
+                                                    TextSpan(
+                                                      text: 'Loved By',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                              ),
+                                                    ),
+                                                    TextSpan(
+                                                      text: ' - 593 Order',
+                                                      style: TextStyle(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
+                                                      ),
+                                                    )
+                                                  ],
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium,
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      7.0, 10.0, 0.0, 0.0),
+                                              child: RatingBar.builder(
+                                                onRatingUpdate: (newValue) =>
+                                                    setState(() =>
+                                                        _model.ratingBarValue7 =
+                                                            newValue),
+                                                itemBuilder: (context, index) =>
+                                                    Icon(
+                                                  Icons.star_rounded,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                ),
+                                                direction: Axis.horizontal,
+                                                initialRating: _model
+                                                    .ratingBarValue7 ??= 3.0,
+                                                unratedColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .accent3,
+                                                itemCount: 5,
+                                                itemSize: 30.0,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Container(
+                                        width: 382.0,
+                                        height: 321.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1593908717414-78a92b700feb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw3fHxyZXN0dXJhbnR8ZW58MHx8fHwxNjk2NzAzNTM4fDA&ixlib=rb-4.0.3&q=85',
+                                                width: 389.0,
+                                                height: 185.0,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 7.0, 7.0),
+                                              child: Text(
+                                                'The Bar On Wheel',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 0.0, 7.0, 7.0),
+                                              child: Text(
+                                                'The best mobile drink shop',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 17.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 0.0, 0.0),
+                                              child: RichText(
+                                                textScaleFactor:
+                                                    MediaQuery.of(context)
+                                                        .textScaleFactor,
+                                                text: TextSpan(
+                                                  children: [
+                                                    TextSpan(
+                                                      text: 'Loved By',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                              ),
+                                                    ),
+                                                    TextSpan(
+                                                      text: ' - 593 Order',
+                                                      style: TextStyle(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
+                                                      ),
+                                                    )
+                                                  ],
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium,
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      7.0, 10.0, 0.0, 0.0),
+                                              child: RatingBar.builder(
+                                                onRatingUpdate: (newValue) =>
+                                                    setState(() =>
+                                                        _model.ratingBarValue8 =
+                                                            newValue),
+                                                itemBuilder: (context, index) =>
+                                                    Icon(
+                                                  Icons.star_rounded,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                ),
+                                                direction: Axis.horizontal,
+                                                initialRating: _model
+                                                    .ratingBarValue8 ??= 3.0,
+                                                unratedColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .accent3,
+                                                itemCount: 5,
+                                                itemSize: 30.0,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Container(
+                                        width: 382.0,
+                                        height: 321.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1593908717414-78a92b700feb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw3fHxyZXN0dXJhbnR8ZW58MHx8fHwxNjk2NzAzNTM4fDA&ixlib=rb-4.0.3&q=85',
+                                                width: 389.0,
+                                                height: 185.0,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 7.0, 7.0),
+                                              child: Text(
+                                                'The Bar On Wheel',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 0.0, 7.0, 7.0),
+                                              child: Text(
+                                                'The best mobile drink shop',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 17.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 0.0, 0.0),
+                                              child: RichText(
+                                                textScaleFactor:
+                                                    MediaQuery.of(context)
+                                                        .textScaleFactor,
+                                                text: TextSpan(
+                                                  children: [
+                                                    TextSpan(
+                                                      text: 'Loved By',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                              ),
+                                                    ),
+                                                    TextSpan(
+                                                      text: ' - 593 Order',
+                                                      style: TextStyle(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
+                                                      ),
+                                                    )
+                                                  ],
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium,
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      7.0, 10.0, 0.0, 0.0),
+                                              child: RatingBar.builder(
+                                                onRatingUpdate: (newValue) =>
+                                                    setState(() =>
+                                                        _model.ratingBarValue9 =
+                                                            newValue),
+                                                itemBuilder: (context, index) =>
+                                                    Icon(
+                                                  Icons.star_rounded,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                ),
+                                                direction: Axis.horizontal,
+                                                initialRating: _model
+                                                    .ratingBarValue9 ??= 3.0,
+                                                unratedColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .accent3,
+                                                itemCount: 5,
+                                                itemSize: 30.0,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Container(
+                                        width: 382.0,
+                                        height: 321.0,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                        ),
+                                        child: Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceAround,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                              child: Image.network(
+                                                'https://images.unsplash.com/photo-1593908717414-78a92b700feb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHw3fHxyZXN0dXJhbnR8ZW58MHx8fHwxNjk2NzAzNTM4fDA&ixlib=rb-4.0.3&q=85',
+                                                width: 389.0,
+                                                height: 185.0,
+                                                fit: BoxFit.cover,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 7.0, 7.0),
+                                              child: Text(
+                                                'The Bar On Wheel',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 22.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 0.0, 7.0, 7.0),
+                                              child: Text(
+                                                'The best mobile drink shop',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodySmall
+                                                        .override(
+                                                          fontFamily:
+                                                              'Readex Pro',
+                                                          fontSize: 17.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                        ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(7.0, 7.0, 0.0, 0.0),
+                                              child: RichText(
+                                                textScaleFactor:
+                                                    MediaQuery.of(context)
+                                                        .textScaleFactor,
+                                                text: TextSpan(
+                                                  children: [
+                                                    TextSpan(
+                                                      text: 'Loved By',
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'Readex Pro',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                              ),
+                                                    ),
+                                                    TextSpan(
+                                                      text: ' - 593 Order',
+                                                      style: TextStyle(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
+                                                      ),
+                                                    )
+                                                  ],
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium,
+                                                ),
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      7.0, 10.0, 0.0, 0.0),
+                                              child: RatingBar.builder(
+                                                onRatingUpdate: (newValue) =>
+                                                    setState(() => _model
+                                                            .ratingBarValue10 =
+                                                        newValue),
+                                                itemBuilder: (context, index) =>
+                                                    Icon(
+                                                  Icons.star_rounded,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primary,
+                                                ),
+                                                direction: Axis.horizontal,
+                                                initialRating: _model
+                                                    .ratingBarValue10 ??= 3.0,
+                                                unratedColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .accent3,
+                                                itemCount: 5,
+                                                itemSize: 30.0,
+                                                glowColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    ),
+                                  ]
+                                      .divide(SizedBox(width: 30.0))
+                                      .around(SizedBox(width: 30.0)),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

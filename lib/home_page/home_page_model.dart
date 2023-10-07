@@ -30,8 +30,6 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   double? ratingBarValue4;
   // State field(s) for RatingBar widget.
   double? ratingBarValue5;
-  // State field(s) for RatingBar widget.
-  double? ratingBarValue6;
 
   /// Initialization and disposal methods.
 

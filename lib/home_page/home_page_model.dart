@@ -21,7 +21,17 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   String? choiceChipsValue2;
   FormFieldController<List<String>>? choiceChipsValueController2;
   // State field(s) for RatingBar widget.
-  double? ratingBarValue;
+  double? ratingBarValue1;
+  // State field(s) for RatingBar widget.
+  double? ratingBarValue2;
+  // State field(s) for RatingBar widget.
+  double? ratingBarValue3;
+  // State field(s) for RatingBar widget.
+  double? ratingBarValue4;
+  // State field(s) for RatingBar widget.
+  double? ratingBarValue5;
+  // State field(s) for RatingBar widget.
+  double? ratingBarValue6;
 
   /// Initialization and disposal methods.
 

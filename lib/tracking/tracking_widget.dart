@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -34,13 +35,15 @@ class _TrackingWidgetState extends State<TrackingWidget> {
         singleRecord: true,
       ).then((s) => s.firstOrNull);
       setState(() {
-        _model.resturant = _model.resutratQuery?.currentLocation;
+        _model.resturant = functions
+            .removeOtherWord(_model.resutratQuery?.currentLocation?.toString());
       });
       _model.riderQuery = await queryRiderRecordOnce(
         singleRecord: true,
       ).then((s) => s.firstOrNull);
       setState(() {
-        _model.rider = _model.riderQuery?.currentLocation;
+        _model.rider = functions
+            .removeOtherWord(_model.riderQuery?.currentLocation?.toString());
       });
     });
 
@@ -107,7 +110,8 @@ class _TrackingWidgetState extends State<TrackingWidget> {
           top: true,
           child: Visibility(
             visible: valueOrDefault<bool>(
-              (_model.resturant != null) && (_model.rider != null),
+              (_model.resturant != null && _model.resturant != '') &&
+                  (_model.rider != null && _model.rider != ''),
               false,
             ),
             child: Column(

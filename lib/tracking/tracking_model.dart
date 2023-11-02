@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 class TrackingModel extends FlutterFlowModel<TrackingWidget> {
   ///  Local state fields for this page.
 
-  LatLng? resturant;
+  String? resturant;
 
-  LatLng? rider;
+  String? rider;
 
   ///  State fields for stateful widgets in this page.
 

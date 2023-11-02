@@ -2,6 +2,7 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -100,7 +101,16 @@ class _TrackingWidgetState extends State<TrackingWidget> {
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [],
+            children: [
+              SizedBox(
+                width: double.infinity,
+                height: 400.0,
+                child: custom_widgets.MapScreen(
+                  width: double.infinity,
+                  height: 400.0,
+                ),
+              ),
+            ],
           ),
         ),
       ),

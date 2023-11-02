@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'home_page_widget.dart' show HomePageWidget;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -14,11 +15,8 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
 
   final unfocusNode = FocusNode();
   // State field(s) for ChoiceChips widget.
-  String? choiceChipsValue1;
-  FormFieldController<List<String>>? choiceChipsValueController1;
-  // State field(s) for ChoiceChips widget.
-  String? choiceChipsValue2;
-  FormFieldController<List<String>>? choiceChipsValueController2;
+  String? choiceChipsValue;
+  FormFieldController<List<String>>? choiceChipsValueController;
 
   /// Initialization and disposal methods.
 

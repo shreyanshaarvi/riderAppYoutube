@@ -8,8 +8,9 @@ import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
 
-import '../../auth/base_auth_user_provider.dart';
-import '../../backend/push_notifications/push_notifications_handler.dart'
+import '/auth/base_auth_user_provider.dart';
+
+import '/backend/push_notifications/push_notifications_handler.dart'
     show PushNotificationsHandler;
 import '/index.dart';
 import '/main.dart';
@@ -135,6 +136,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'cartPage',
           path: '/cartPage',
           builder: (context, params) => CartPageWidget(),
+        ),
+        FFRoute(
+          name: 'Tracking',
+          path: '/tracking',
+          builder: (context, params) => TrackingWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

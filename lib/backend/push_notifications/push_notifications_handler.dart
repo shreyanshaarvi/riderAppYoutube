@@ -120,6 +120,7 @@ final parametersBuilderMap =
   'OrderTracker': ParameterData.none(),
   'OrderConfirm': ParameterData.none(),
   'cartPage': ParameterData.none(),
+  'Tracking': ParameterData.none(),
 };
 
 Map<String, dynamic> getInitialParameterData(Map<String, dynamic> data) {

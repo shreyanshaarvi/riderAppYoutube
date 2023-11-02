@@ -8,7 +8,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:flutterflow_colorpicker/flutterflow_colorpicker.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -45,6 +44,15 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget> {
 
   @override
   Widget build(BuildContext context) {
+    if (isiOS) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: Theme.of(context).brightness,
+          systemStatusBarContrastEnforced: true,
+        ),
+      );
+    }
+
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -205,100 +213,6 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  10.0, 0.0, 0.0, 0.0),
-                              child: Container(
-                                width: 95.0,
-                                height: 28.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  borderRadius: BorderRadius.circular(10.0),
-                                  border: Border.all(
-                                    color: FlutterFlowTheme.of(context).primary,
-                                  ),
-                                ),
-                                child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      5.0, 5.0, 5.0, 5.0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Icon(
-                                        Icons.filter_list_outlined,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        size: 16.0,
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            5.0, 0.0, 0.0, 0.0),
-                                        child: InkWell(
-                                          splashColor: Colors.transparent,
-                                          focusColor: Colors.transparent,
-                                          hoverColor: Colors.transparent,
-                                          highlightColor: Colors.transparent,
-                                          onTap: () async {
-                                            final _colorPickedColor =
-                                                await showFFColorPicker(
-                                              context,
-                                              currentColor: _model
-                                                      .colorPicked ??=
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              showRecentColors: true,
-                                              allowOpacity: true,
-                                              textColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              secondaryTextColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                              backgroundColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryBackground,
-                                              primaryButtonBackgroundColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              primaryButtonTextColor:
-                                                  Colors.white,
-                                              primaryButtonBorderColor:
-                                                  Colors.transparent,
-                                              displayAsBottomSheet:
-                                                  isMobileWidth(context),
-                                            );
-
-                                            if (_colorPickedColor != null) {
-                                              safeSetState(() =>
-                                                  _model.colorPicked =
-                                                      _colorPickedColor);
-                                            }
-                                          },
-                                          child: Text(
-                                            'Filter',
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Readex Pro',
-                                                  fontSize: 11.0,
-                                                ),
-                                          ),
-                                        ),
-                                      ),
-                                      Icon(
-                                        Icons.filter_list_outlined,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        size: 16.0,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
                             Expanded(
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -1367,15 +1281,6 @@ class _ProductDetailWidgetState extends State<ProductDetailWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                     ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      5.0, 0.0, 0.0, 0.0),
-                                  child: Icon(
-                                    Icons.arrow_drop_down,
-                                    color: FlutterFlowTheme.of(context).primary,
-                                    size: 24.0,
                                   ),
                                 ),
                               ],

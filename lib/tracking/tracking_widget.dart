@@ -6,25 +6,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'order_tracker_model.dart';
-export 'order_tracker_model.dart';
+import 'tracking_model.dart';
+export 'tracking_model.dart';
 
-class OrderTrackerWidget extends StatefulWidget {
-  const OrderTrackerWidget({Key? key}) : super(key: key);
+class TrackingWidget extends StatefulWidget {
+  const TrackingWidget({Key? key}) : super(key: key);
 
   @override
-  _OrderTrackerWidgetState createState() => _OrderTrackerWidgetState();
+  _TrackingWidgetState createState() => _TrackingWidgetState();
 }
 
-class _OrderTrackerWidgetState extends State<OrderTrackerWidget> {
-  late OrderTrackerModel _model;
+class _TrackingWidgetState extends State<TrackingWidget> {
+  late TrackingModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => OrderTrackerModel());
+    _model = createModel(context, () => TrackingModel());
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
@@ -85,12 +85,9 @@ class _OrderTrackerWidgetState extends State<OrderTrackerWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: Align(
-            alignment: AlignmentDirectional(0.00, 0.00),
-            child: Text(
-              'Order Accepted',
-              style: FlutterFlowTheme.of(context).bodyMedium,
-            ),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [],
           ),
         ),
       ),

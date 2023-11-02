@@ -9,7 +9,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:flutterflow_colorpicker/flutterflow_colorpicker.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +20,6 @@ class ProductDetailModel extends FlutterFlowModel<ProductDetailWidget> {
   final unfocusNode = FocusNode();
   // State field(s) for RatingBar widget.
   double? ratingBarValue1;
-  Color? colorPicked;
   // State field(s) for RatingBar widget.
   double? ratingBarValue2;
   String currentPageLink = '';

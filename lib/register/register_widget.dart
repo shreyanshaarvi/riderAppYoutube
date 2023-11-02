@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -29,8 +30,14 @@ class _RegisterWidgetState extends State<RegisterWidget> {
     _model = createModel(context, () => RegisterModel());
 
     _model.textController1 ??= TextEditingController();
+    _model.textFieldFocusNode1 ??= FocusNode();
+
     _model.textController2 ??= TextEditingController();
+    _model.textFieldFocusNode2 ??= FocusNode();
+
     _model.textController3 ??= TextEditingController();
+    _model.textFieldFocusNode3 ??= FocusNode();
+
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -43,6 +50,15 @@ class _RegisterWidgetState extends State<RegisterWidget> {
 
   @override
   Widget build(BuildContext context) {
+    if (isiOS) {
+      SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(
+          statusBarBrightness: Theme.of(context).brightness,
+          systemStatusBarContrastEnforced: true,
+        ),
+      );
+    }
+
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -124,6 +140,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                             EdgeInsetsDirectional.fromSTEB(8.0, 20.0, 8.0, 0.0),
                         child: TextFormField(
                           controller: _model.textController1,
+                          focusNode: _model.textFieldFocusNode1,
                           onChanged: (_) => EasyDebounce.debounce(
                             '_model.textController1',
                             Duration(milliseconds: 2000),
@@ -194,6 +211,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                             EdgeInsetsDirectional.fromSTEB(8.0, 10.0, 8.0, 0.0),
                         child: TextFormField(
                           controller: _model.textController2,
+                          focusNode: _model.textFieldFocusNode2,
                           autofocus: true,
                           obscureText: !_model.passwordVisibility1,
                           decoration: InputDecoration(
@@ -259,6 +277,7 @@ class _RegisterWidgetState extends State<RegisterWidget> {
                             EdgeInsetsDirectional.fromSTEB(8.0, 10.0, 8.0, 0.0),
                         child: TextFormField(
                           controller: _model.textController3,
+                          focusNode: _model.textFieldFocusNode3,
                           autofocus: true,
                           obscureText: !_model.passwordVisibility2,
                           decoration: InputDecoration(

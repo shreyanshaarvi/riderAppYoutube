@@ -7,3 +7,4 @@ export '/product_detail/product_detail_widget.dart' show ProductDetailWidget;
 export '/order_tracker/order_tracker_widget.dart' show OrderTrackerWidget;
 export '/order_confirm/order_confirm_widget.dart' show OrderConfirmWidget;
 export '/cart_page/cart_page_widget.dart' show CartPageWidget;
+export '/tracking/tracking_widget.dart' show TrackingWidget;

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import '../../flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_util.dart';
 import 'api_manager.dart';
 
 export 'api_manager.dart' show ApiCallResponse;
@@ -12,7 +12,7 @@ class DistanceMatrixCall {
   static Future<ApiCallResponse> call({
     String? riderLocation = '',
     String? restuant = '',
-  }) {
+  }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'DistanceMatrix ',
       apiUrl: 'https://maps.googleapis.com/maps/api/distancematrix/json',

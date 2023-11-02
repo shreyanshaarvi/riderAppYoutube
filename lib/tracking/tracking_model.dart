@@ -1,17 +1,14 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'start_screen_widget.dart' show StartScreenWidget;
+import 'tracking_widget.dart' show TrackingWidget;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class StartScreenModel extends FlutterFlowModel<StartScreenWidget> {
-  ///  Local state fields for this page.
-
-  LatLng? location;
-
+class TrackingModel extends FlutterFlowModel<TrackingWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

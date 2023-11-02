@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
 
-class MapScreen extends StatefulWidget {
-  const MapScreen({
+class GoogleMapsWidget extends StatefulWidget {
+  const GoogleMapsWidget({
     Key? key,
     this.width,
     this.height,
@@ -20,16 +20,14 @@ class MapScreen extends StatefulWidget {
   final double? height;
 
   @override
-  _MapScreenState createState() => _MapScreenState();
+  _GoogleMapsWidgetState createState() => _GoogleMapsWidgetState();
 }
 
-class _MapScreenState extends State<MapScreen> {
-  final mapsWidgetController = GlobalKey<GoogleMapsWidgetState>();
+class _GoogleMapsWidgetState extends State<GoogleMapsWidget> {
   @override
   Widget build(BuildContext context) {
     return GoogleMapsWidget(
         apiKey: "AIzaSyAHxerJwxgZ4ua-fhc7X5lSObWf0ksrCLI",
-        key: mapsWidgetController,
         sourceLatLng: LatLng(40.484000837597925, -3.369978368282318),
         destinationLatLng: LatLng(
           40.48017307700204,

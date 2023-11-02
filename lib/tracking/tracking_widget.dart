@@ -105,7 +105,7 @@ class _TrackingWidgetState extends State<TrackingWidget> {
               SizedBox(
                 width: double.infinity,
                 height: 400.0,
-                child: custom_widgets.MapScreen(
+                child: custom_widgets.GoogleMapsWidget(
                   width: double.infinity,
                   height: 400.0,
                 ),

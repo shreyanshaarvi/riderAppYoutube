@@ -332,12 +332,26 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   0.0),
                                                         ),
                                                       ),
-                                                      child: Icon(
-                                                        Icons.add,
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
-                                                        size: 24.0,
+                                                      child: InkWell(
+                                                        splashColor:
+                                                            Colors.transparent,
+                                                        focusColor:
+                                                            Colors.transparent,
+                                                        hoverColor:
+                                                            Colors.transparent,
+                                                        highlightColor:
+                                                            Colors.transparent,
+                                                        onTap: () async {
+                                                          context.pushNamed(
+                                                              'Tracking');
+                                                        },
+                                                        child: Icon(
+                                                          Icons.add,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryBackground,
+                                                          size: 24.0,
+                                                        ),
                                                       ),
                                                     ),
                                                   ],

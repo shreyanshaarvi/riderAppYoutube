@@ -24,10 +24,12 @@ class MapScreen extends StatefulWidget {
 }
 
 class _MapScreenState extends State<MapScreen> {
+  final mapsWidgetController = GlobalKey<GoogleMapsWidgetState>();
   @override
   Widget build(BuildContext context) {
     return GoogleMapsWidget(
         apiKey: "AIzaSyAHxerJwxgZ4ua-fhc7X5lSObWf0ksrCLI",
+        key: mapsWidgetController,
         sourceLatLng: LatLng(40.484000837597925, -3.369978368282318),
         destinationLatLng: LatLng(
           40.48017307700204,

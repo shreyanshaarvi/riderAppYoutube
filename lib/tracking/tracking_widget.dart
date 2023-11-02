@@ -33,9 +33,15 @@ class _TrackingWidgetState extends State<TrackingWidget> {
       _model.resutratQuery = await queryResturantRecordOnce(
         singleRecord: true,
       ).then((s) => s.firstOrNull);
+      setState(() {
+        _model.resturant = _model.resutratQuery?.currentLocation;
+      });
       _model.riderQuery = await queryRiderRecordOnce(
         singleRecord: true,
       ).then((s) => s.firstOrNull);
+      setState(() {
+        _model.rider = _model.riderQuery?.currentLocation;
+      });
     });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
@@ -99,21 +105,27 @@ class _TrackingWidgetState extends State<TrackingWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              SizedBox(
-                width: double.infinity,
-                height: 400.0,
-                child: custom_widgets.GoogleMapsWidget(
+          child: Visibility(
+            visible: valueOrDefault<bool>(
+              (_model.resturant != null) && (_model.rider != null),
+              false,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                SizedBox(
                   width: double.infinity,
                   height: 400.0,
-                  apikey: 'AIzaSyAHxerJwxgZ4ua-fhc7X5lSObWf0ksrCLI',
-                  sourceLatLng: _model.resutratQuery!.currentLocation!,
-                  destinationLatLng: _model.riderQuery!.currentLocation!,
+                  child: custom_widgets.GoogleMapsWidget(
+                    width: double.infinity,
+                    height: 400.0,
+                    apikey: 'AIzaSyAHxerJwxgZ4ua-fhc7X5lSObWf0ksrCLI',
+                    sourceLatLng: _model.resutratQuery!.currentLocation!,
+                    destinationLatLng: _model.riderQuery!.currentLocation!,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

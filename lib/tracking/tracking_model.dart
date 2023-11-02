@@ -4,6 +4,12 @@ import 'tracking_widget.dart' show TrackingWidget;
 import 'package:flutter/material.dart';
 
 class TrackingModel extends FlutterFlowModel<TrackingWidget> {
+  ///  Local state fields for this page.
+
+  LatLng? resturant;
+
+  LatLng? rider;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

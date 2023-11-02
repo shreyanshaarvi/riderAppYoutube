@@ -113,6 +113,8 @@ class _TrackingWidgetState extends State<TrackingWidget> {
                       'AIzaSyBS0SfbdGTLeWqFN449DfxEDY0gKNMVOJ4',
                   androidGoogleMapsApiKey:
                       'AIzaSyAHxerJwxgZ4ua-fhc7X5lSObWf0ksrCLI',
+                  webGoogleMapsApiKey:
+                      'AIzaSyBTi44kvNeSXE2oHESocfObg7p7rSTr2wk',
                   lineColor: FlutterFlowTheme.of(context).primary,
                   startCoordinate: _model.resutratQuery!.currentLocation!,
                   endCoordinate: _model.riderQuery!.currentLocation!,

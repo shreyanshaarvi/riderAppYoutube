@@ -1,16 +1,13 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'order_tracker_model.dart';
 export 'order_tracker_model.dart';
 
 class OrderTrackerWidget extends StatefulWidget {
-  const OrderTrackerWidget({Key? key}) : super(key: key);
+  const OrderTrackerWidget({super.key});
 
   @override
   _OrderTrackerWidgetState createState() => _OrderTrackerWidgetState();
@@ -62,7 +59,7 @@ class _OrderTrackerWidgetState extends State<OrderTrackerWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
               size: 30.0,
@@ -79,14 +76,14 @@ class _OrderTrackerWidgetState extends State<OrderTrackerWidget> {
                   fontSize: 22.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.00, 0.00),
+            alignment: const AlignmentDirectional(0.00, 0.00),
             child: Text(
               'Order Accepted',
               style: FlutterFlowTheme.of(context).bodyMedium,

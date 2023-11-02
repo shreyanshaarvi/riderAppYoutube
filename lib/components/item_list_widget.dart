@@ -2,15 +2,12 @@ import '/flutter_flow/flutter_flow_count_controller.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'item_list_model.dart';
 export 'item_list_model.dart';
 
 class ItemListWidget extends StatefulWidget {
-  const ItemListWidget({Key? key}) : super(key: key);
+  const ItemListWidget({super.key});
 
   @override
   _ItemListWidgetState createState() => _ItemListWidgetState();
@@ -47,7 +44,7 @@ class _ItemListWidgetState extends State<ItemListWidget> {
       height: 347.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
           topLeft: Radius.circular(10.0),
@@ -59,7 +56,7 @@ class _ItemListWidgetState extends State<ItemListWidget> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -100,7 +97,7 @@ class _ItemListWidgetState extends State<ItemListWidget> {
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 10.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 10.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -116,7 +113,7 @@ class _ItemListWidgetState extends State<ItemListWidget> {
                         ),
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 5.0, 0.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -141,12 +138,12 @@ class _ItemListWidgetState extends State<ItemListWidget> {
                                         fontSize: 11.0,
                                       ),
                                 ),
-                              ].divide(SizedBox(height: 10.0)),
+                              ].divide(const SizedBox(height: 10.0)),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -196,7 +193,7 @@ class _ItemListWidgetState extends State<ItemListWidget> {
                                       _model.countControllerValue = count),
                                   stepSize: 1,
                                   contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
+                                      const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 10.0, 0.0),
                                 ),
                               ),

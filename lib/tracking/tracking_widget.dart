@@ -1,16 +1,13 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'tracking_model.dart';
 export 'tracking_model.dart';
 
 class TrackingWidget extends StatefulWidget {
-  const TrackingWidget({Key? key}) : super(key: key);
+  const TrackingWidget({super.key});
 
   @override
   _TrackingWidgetState createState() => _TrackingWidgetState();
@@ -62,7 +59,7 @@ class _TrackingWidgetState extends State<TrackingWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
               size: 30.0,
@@ -79,11 +76,11 @@ class _TrackingWidgetState extends State<TrackingWidget> {
                   fontSize: 22.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
-        body: SafeArea(
+        body: const SafeArea(
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,

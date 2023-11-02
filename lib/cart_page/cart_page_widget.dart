@@ -6,13 +6,11 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'cart_page_model.dart';
 export 'cart_page_model.dart';
 
 class CartPageWidget extends StatefulWidget {
-  const CartPageWidget({Key? key}) : super(key: key);
+  const CartPageWidget({super.key});
 
   @override
   _CartPageWidgetState createState() => _CartPageWidgetState();
@@ -64,7 +62,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
               size: 30.0,
@@ -81,7 +79,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                   fontSize: 22.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -97,7 +95,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
                     child: Material(
                       color: Colors.transparent,
                       elevation: 0.0,
@@ -138,7 +136,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -147,7 +145,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 8.0, 0.0, 0.0),
                                     child: Text(
                                       'Indian Burger',
@@ -156,7 +154,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 8.0, 0.0, 8.0),
                                     child: Text(
                                       '₹ 100',
@@ -168,7 +166,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 10.0, 0.0),
                               child: Container(
                                 width: 120.0,
@@ -225,7 +223,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
                 child: Material(
                   color: Colors.transparent,
                   elevation: 0.0,
@@ -241,7 +239,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
+                          const EdgeInsetsDirectional.fromSTEB(8.0, 8.0, 8.0, 8.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -295,7 +293,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 10.0, 0.0),
                                     child: Icon(
                                       Icons.account_balance_outlined,
@@ -336,7 +334,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 10.0, 0.0),
                                     child: FaIcon(
                                       FontAwesomeIcons.carAlt,
@@ -377,7 +375,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 10.0, 0.0),
                                     child: Icon(
                                       Icons.airplay,
@@ -445,7 +443,7 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                               ),
                             ],
                           ),
-                        ].divide(SizedBox(height: 10.0)),
+                        ].divide(const SizedBox(height: 10.0)),
                       ),
                     ),
                   ),
@@ -458,16 +456,16 @@ class _CartPageWidgetState extends State<CartPageWidget> {
                 text: 'Pay',
                 options: FFButtonOptions(
                   height: 40.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                   iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'Readex Pro',
                         color: Colors.white,
                       ),
                   elevation: 3.0,
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Colors.transparent,
                     width: 1.0,
                   ),

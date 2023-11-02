@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -6,17 +5,14 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'order_confirm_model.dart';
 export 'order_confirm_model.dart';
 
 class OrderConfirmWidget extends StatefulWidget {
-  const OrderConfirmWidget({Key? key}) : super(key: key);
+  const OrderConfirmWidget({super.key});
 
   @override
   _OrderConfirmWidgetState createState() => _OrderConfirmWidgetState();
@@ -68,7 +64,7 @@ class _OrderConfirmWidgetState extends State<OrderConfirmWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
               size: 30.0,
@@ -85,7 +81,7 @@ class _OrderConfirmWidgetState extends State<OrderConfirmWidget> {
                   fontSize: 22.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -96,7 +92,7 @@ class _OrderConfirmWidgetState extends State<OrderConfirmWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Align(
-                alignment: AlignmentDirectional(0.00, 0.00),
+                alignment: const AlignmentDirectional(0.00, 0.00),
                 child: FFButtonWidget(
                   onPressed: () async {
                     _model.riderList = await queryRiderRecordOnce();
@@ -106,7 +102,7 @@ class _OrderConfirmWidgetState extends State<OrderConfirmWidget> {
                     while (_model.isriderAssigned == false) {
                       _model.apiResulte9g = await DistanceMatrixCall.call(
                         riderLocation: functions.removeOtherWord(_model
-                            .riderList?[_model.index]?.currentLocation
+                            .riderList?[_model.index].currentLocation
                             ?.toString()),
                         restuant: functions.removeOtherWord(_model
                             .resturantLocation?.currentLocation
@@ -123,9 +119,9 @@ class _OrderConfirmWidgetState extends State<OrderConfirmWidget> {
                           await OrderAssineeRecord.collection
                               .doc()
                               .set(createOrderAssineeRecordData(
-                                name: _model.riderList?[_model.index]?.name,
+                                name: _model.riderList?[_model.index].name,
                                 riderRef:
-                                    _model.riderList?[_model.index]?.reference,
+                                    _model.riderList?[_model.index].reference,
                                 resturantRef:
                                     _model.resturantLocation?.reference,
                                 isAccepted: false,
@@ -137,7 +133,7 @@ class _OrderConfirmWidgetState extends State<OrderConfirmWidget> {
                             await queryOrderAssineeRecordOnce();
                         await Future.delayed(
                             const Duration(milliseconds: 1000));
-                        if (_model.riderAcception?[_model.index]?.isAccepted ==
+                        if (_model.riderAcception?[_model.index].isAccepted ==
                             true) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
@@ -148,7 +144,7 @@ class _OrderConfirmWidgetState extends State<OrderConfirmWidget> {
                                       FlutterFlowTheme.of(context).primaryText,
                                 ),
                               ),
-                              duration: Duration(milliseconds: 4000),
+                              duration: const Duration(milliseconds: 4000),
                               backgroundColor:
                                   FlutterFlowTheme.of(context).secondary,
                             ),
@@ -168,7 +164,7 @@ class _OrderConfirmWidgetState extends State<OrderConfirmWidget> {
                                 color: FlutterFlowTheme.of(context).primaryText,
                               ),
                             ),
-                            duration: Duration(milliseconds: 4000),
+                            duration: const Duration(milliseconds: 4000),
                             backgroundColor:
                                 FlutterFlowTheme.of(context).secondary,
                           ),
@@ -184,16 +180,16 @@ class _OrderConfirmWidgetState extends State<OrderConfirmWidget> {
                   options: FFButtonOptions(
                     height: 40.0,
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                     iconPadding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'Readex Pro',
                           color: Colors.white,
                         ),
                     elevation: 3.0,
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.transparent,
                       width: 1.0,
                     ),

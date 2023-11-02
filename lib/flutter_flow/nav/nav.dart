@@ -2,23 +2,15 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/backend/push_notifications/push_notifications_handler.dart'
     show PushNotificationsHandler;
 import '/index.dart';
-import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -87,60 +79,60 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       errorBuilder: (context, state) => _RouteErrorBuilder(
         state: state,
         child:
-            appStateNotifier.loggedIn ? HomePageWidget() : StartScreenWidget(),
+            appStateNotifier.loggedIn ? const HomePageWidget() : const StartScreenWidget(),
       ),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? HomePageWidget()
-              : StartScreenWidget(),
+              ? const HomePageWidget()
+              : const StartScreenWidget(),
         ),
         FFRoute(
           name: 'StartScreen',
           path: '/startScreen',
-          builder: (context, params) => StartScreenWidget(),
+          builder: (context, params) => const StartScreenWidget(),
         ),
         FFRoute(
           name: 'Register',
           path: '/register',
-          builder: (context, params) => RegisterWidget(),
+          builder: (context, params) => const RegisterWidget(),
         ),
         FFRoute(
           name: 'Login',
           path: '/login',
-          builder: (context, params) => LoginWidget(),
+          builder: (context, params) => const LoginWidget(),
         ),
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
-          builder: (context, params) => HomePageWidget(),
+          builder: (context, params) => const HomePageWidget(),
         ),
         FFRoute(
           name: 'ProductDetail',
           path: '/productDetail',
-          builder: (context, params) => ProductDetailWidget(),
+          builder: (context, params) => const ProductDetailWidget(),
         ),
         FFRoute(
           name: 'OrderTracker',
           path: '/orderTracker',
-          builder: (context, params) => OrderTrackerWidget(),
+          builder: (context, params) => const OrderTrackerWidget(),
         ),
         FFRoute(
           name: 'OrderConfirm',
           path: '/orderConfirm',
-          builder: (context, params) => OrderConfirmWidget(),
+          builder: (context, params) => const OrderConfirmWidget(),
         ),
         FFRoute(
           name: 'cartPage',
           path: '/cartPage',
-          builder: (context, params) => CartPageWidget(),
+          builder: (context, params) => const CartPageWidget(),
         ),
         FFRoute(
           name: 'Tracking',
           path: '/tracking',
-          builder: (context, params) => TrackingWidget(),
+          builder: (context, params) => const TrackingWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -366,15 +358,14 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class _RouteErrorBuilder extends StatefulWidget {
   const _RouteErrorBuilder({
-    Key? key,
     required this.state,
     required this.child,
-  }) : super(key: key);
+  });
 
   final GoRouterState state;
   final Widget child;

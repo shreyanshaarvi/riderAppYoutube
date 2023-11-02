@@ -3,13 +3,11 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'start_screen_model.dart';
 export 'start_screen_model.dart';
 
 class StartScreenWidget extends StatefulWidget {
-  const StartScreenWidget({Key? key}) : super(key: key);
+  const StartScreenWidget({super.key});
 
   @override
   _StartScreenWidgetState createState() => _StartScreenWidgetState();
@@ -56,7 +54,7 @@ class _StartScreenWidgetState extends State<StartScreenWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: AlignmentDirectional(0.00, 0.00),
+            alignment: const AlignmentDirectional(0.00, 0.00),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,7 +65,7 @@ class _StartScreenWidgetState extends State<StartScreenWidget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                       child: Text(
                         'Skip',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -101,7 +99,7 @@ class _StartScreenWidgetState extends State<StartScreenWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                       child: Text(
                         'Khana Ghar',
                         style:
@@ -115,7 +113,7 @@ class _StartScreenWidgetState extends State<StartScreenWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                       child: Text(
                         'World Class Resturant At Your Home',
                         style: FlutterFlowTheme.of(context)
@@ -131,7 +129,7 @@ class _StartScreenWidgetState extends State<StartScreenWidget> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Text(
                     'Get Food Delivered At Your Home From 1000+ Outlets. ',
                     textAlign: TextAlign.center,
@@ -144,7 +142,7 @@ class _StartScreenWidgetState extends State<StartScreenWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 90.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 90.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -157,9 +155,9 @@ class _StartScreenWidgetState extends State<StartScreenWidget> {
                         options: FFButtonOptions(
                           width: 131.0,
                           height: 48.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 24.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -168,7 +166,7 @@ class _StartScreenWidgetState extends State<StartScreenWidget> {
                                     color: Colors.white,
                                   ),
                           elevation: 3.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1.0,
                           ),
@@ -183,9 +181,9 @@ class _StartScreenWidgetState extends State<StartScreenWidget> {
                         options: FFButtonOptions(
                           width: 131.0,
                           height: 48.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               24.0, 0.0, 24.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: FlutterFlowTheme.of(context).primary,
                           textStyle:
@@ -194,7 +192,7 @@ class _StartScreenWidgetState extends State<StartScreenWidget> {
                                     color: Colors.white,
                                   ),
                           elevation: 3.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1.0,
                           ),

@@ -14,10 +14,16 @@ class GoogleMapsWidget extends StatefulWidget {
     Key? key,
     this.width,
     this.height,
+    required this.apikey,
+    required this.sourceLatLng,
+    required this.destinationLatLng,
   }) : super(key: key);
 
   final double? width;
   final double? height;
+  final String apikey;
+  final LatLng sourceLatLng;
+  final LatLng destinationLatLng;
 
   @override
   _GoogleMapsWidgetState createState() => _GoogleMapsWidgetState();
@@ -27,11 +33,9 @@ class _GoogleMapsWidgetState extends State<GoogleMapsWidget> {
   @override
   Widget build(BuildContext context) {
     return GoogleMapsWidget(
-        apiKey: "AIzaSyAHxerJwxgZ4ua-fhc7X5lSObWf0ksrCLI",
-        sourceLatLng: LatLng(40.484000837597925, -3.369978368282318),
-        destinationLatLng: LatLng(
-          40.48017307700204,
-          -3.3618026599287987,
-        ));
+      sourceLatLng: widget.sourceLatLng,
+      destinationLatLng: widget.destinationLatLng,
+      apikey: 'AIzaSyAHxerJwxgZ4ua-fhc7X5lSObWf0ksrCLI',
+    );
   }
 }

@@ -97,7 +97,7 @@ class _TrackingWidgetState extends State<TrackingWidget> {
           centerTitle: true,
           elevation: 2.0,
         ),
-        body: const SafeArea(
+        body: SafeArea(
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
@@ -108,6 +108,9 @@ class _TrackingWidgetState extends State<TrackingWidget> {
                 child: custom_widgets.GoogleMapsWidget(
                   width: double.infinity,
                   height: 400.0,
+                  apikey: 'AIzaSyAHxerJwxgZ4ua-fhc7X5lSObWf0ksrCLI',
+                  sourceLatLng: _model.resutratQuery!.currentLocation!,
+                  destinationLatLng: _model.riderQuery!.currentLocation!,
                 ),
               ),
             ],

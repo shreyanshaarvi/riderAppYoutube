@@ -109,12 +109,14 @@ class _TrackingWidgetState extends State<TrackingWidget> {
                   width: double.infinity,
                   height: 500.0,
                   updateInterval: 1,
+                  iOSGoogleMapsApiKey:
+                      'AIzaSyBS0SfbdGTLeWqFN449DfxEDY0gKNMVOJ4',
                   androidGoogleMapsApiKey:
                       'AIzaSyAHxerJwxgZ4ua-fhc7X5lSObWf0ksrCLI',
                   lineColor: FlutterFlowTheme.of(context).primary,
-                  startCoordinate: _model.resutratQuery?.currentLocation,
-                  endCoordinate: _model.riderQuery?.currentLocation,
-                  rideDetailsReference: _model.riderQuery?.reference,
+                  startCoordinate: _model.resutratQuery!.currentLocation!,
+                  endCoordinate: _model.riderQuery!.currentLocation!,
+                  rideDetailsReference: _model.riderQuery!.reference,
                 ),
               ),
             ],

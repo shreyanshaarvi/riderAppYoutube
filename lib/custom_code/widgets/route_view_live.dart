@@ -24,30 +24,30 @@ class RouteViewLive extends StatefulWidget {
     Key? key,
     this.width,
     this.height,
-    this.startCoordinate,
-    this.endCoordinate,
-    this.updateInterval,
-    this.iOSGoogleMapsApiKey,
-    this.androidGoogleMapsApiKey,
-    this.webGoogleMapsApiKey,
-    this.lineColor,
-    this.rideDetailsReference,
+    required this.startCoordinate,
+    required this.endCoordinate,
+    required this.updateInterval,
+    required this.iOSGoogleMapsApiKey,
+    required this.androidGoogleMapsApiKey,
+    required this.webGoogleMapsApiKey,
+    required this.rideDetailsReference,
+    this.lineColor = Colors.black,
     this.startAddress,
     this.destinationAddress,
   }) : super(key: key);
 
-  final double? width;
   final double? height;
-  final LatLng? startCoordinate;
-  final LatLng? endCoordinate;
-  final int? updateInterval;
-  final String? iOSGoogleMapsApiKey;
-  final String? androidGoogleMapsApiKey;
-  final String? webGoogleMapsApiKey;
-  final Color? lineColor;
-  final DocumentReference? rideDetailsReference;
+  final double? width;
+  final int updateInterval;
+  final Color lineColor;
+  final LatLng startCoordinate;
+  final LatLng endCoordinate;
   final String? startAddress;
   final String? destinationAddress;
+  final String iOSGoogleMapsApiKey;
+  final String androidGoogleMapsApiKey;
+  final String webGoogleMapsApiKey;
+  final DocumentReference rideDetailsReference;
 
   @override
   _RouteViewLiveState createState() => _RouteViewLiveState();

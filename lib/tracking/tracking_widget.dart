@@ -2,7 +2,6 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -97,31 +96,11 @@ class _TrackingWidgetState extends State<TrackingWidget> {
           centerTitle: true,
           elevation: 2.0,
         ),
-        body: SafeArea(
+        body: const SafeArea(
           top: true,
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [
-              SizedBox(
-                width: double.infinity,
-                height: 500.0,
-                child: custom_widgets.RouteViewLive(
-                  width: double.infinity,
-                  height: 500.0,
-                  updateInterval: 1,
-                  iOSGoogleMapsApiKey:
-                      'AIzaSyBS0SfbdGTLeWqFN449DfxEDY0gKNMVOJ4',
-                  androidGoogleMapsApiKey:
-                      'AIzaSyAHxerJwxgZ4ua-fhc7X5lSObWf0ksrCLI',
-                  webGoogleMapsApiKey:
-                      'AIzaSyBTi44kvNeSXE2oHESocfObg7p7rSTr2wk',
-                  lineColor: FlutterFlowTheme.of(context).primary,
-                  startCoordinate: _model.resutratQuery!.currentLocation!,
-                  endCoordinate: _model.riderQuery!.currentLocation!,
-                  rideDetailsReference: _model.riderQuery!.reference,
-                ),
-              ),
-            ],
+            children: [],
           ),
         ),
       ),
